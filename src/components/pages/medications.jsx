@@ -34,7 +34,7 @@ export default function SidebarMedicationsOnly() {
 
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:8000/ask-medicine/", {
+      const response = await fetch("hhttps://healthfyi-backendpy.onrender.com/ask-medicine/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: `Tell me about ${medicineName}` }),
@@ -57,7 +57,7 @@ export default function SidebarMedicationsOnly() {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/autocomplete/?q=${query}`);
+      const response = await fetch(`https://healthfyi-backendpy.onrender.com/autocomplete/?q=${query}`);
       const data = await response.json();
       setSuggestions(data);
     } catch {
